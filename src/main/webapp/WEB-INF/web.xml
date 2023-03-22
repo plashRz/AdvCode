@@ -41,5 +41,17 @@
         <servlet-name>ServHttp</servlet-name>
         <url-pattern>/sh</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>initParamEx</servlet-name>
+        <servlet-class>com.example.web102.initParamEx</servlet-class>
+        <init-param>
+            <param-name>Org-Name</param-name>
+            <param-value>practice@gmail.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>initParamEx</servlet-name>
+        <url-pattern>/feedBack</url-pattern>
+    </servlet-mapping>
 
 </web-app>
