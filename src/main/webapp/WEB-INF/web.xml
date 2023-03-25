@@ -53,5 +53,28 @@
         <servlet-name>initParamEx</servlet-name>
         <url-pattern>/feedBack</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AppScope</servlet-name>
+        <servlet-class>com.example.web102.AppScope</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AppScope</servlet-name>
+        <url-pattern>/appSc</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>DeUser</param-name>
+        <param-value>Adam</param-value>
+    </context-param>
+    <context-param>
+        <param-name>DeRights</param-name>
+        <param-value>R</param-value>
+    </context-param>
+    <context-param>
+        <param-name>Domain</param-name>
+        <param-value>Global</param-value>
+    </context-param>
+    
 
 </web-app>
