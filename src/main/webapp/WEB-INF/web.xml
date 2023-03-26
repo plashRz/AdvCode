@@ -8,6 +8,7 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
+    <!-- Servlet start -->
     <servlet>
         <servlet-name>FirstServ</servlet-name>
         <servlet-class>com.example.web101.FirstServ</servlet-class>
@@ -74,13 +75,47 @@
 
     <servlet>
         <servlet-name>RequestScope</servlet-name>
-        <servlet-class>com.example.web102.RequestScope</servlet-class>
+        <servlet-class>com.example.web102.Request_Response_Scope</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RequestScope</servlet-name>
         <url-pattern>/r_rSc</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>content_MIME_Type</servlet-name>
+        <servlet-class>com.example.web102.content_MIME_Type</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>content_MIME_Type</servlet-name>
+        <url-pattern>/cmt</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>error_Handling</servlet-name>
+        <servlet-class>com.example.web103.error_Handling</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>error_Handling</servlet-name>
+        <url-pattern>/cex</url-pattern>
+    </servlet-mapping>
+    <!-- Servlet end -->
+
+
+    <!-- Error pages start -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/err.html</location>
+    </error-page>
+    <error-page>
+        <exception-type>com.example.CustomException.myException</exception-type>
+        <location>/err.html</location>
+    </error-page>
+
+    <!-- Error pages end -->
+
+
+    <!-- Context Param start -->
     <context-param>
         <param-name>DeUser</param-name>
         <param-value>Adam</param-value>
@@ -93,6 +128,7 @@
         <param-name>Domain</param-name>
         <param-value>Global</param-value>
     </context-param>
+    <!-- Context Param start -->
     
 
 </web-app>
