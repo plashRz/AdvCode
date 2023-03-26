@@ -1,0 +1,5 @@
+4 scopes
+1: Application
+2: Session
+3: Request
+4: Page

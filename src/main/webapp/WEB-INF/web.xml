@@ -63,6 +63,24 @@
         <url-pattern>/appSc</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SessionScope</servlet-name>
+        <servlet-class>com.example.web102.SessionScope</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionScope</servlet-name>
+        <url-pattern>/sesSc</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RequestScope</servlet-name>
+        <servlet-class>com.example.web102.RequestScope</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RequestScope</servlet-name>
+        <url-pattern>/r_rSc</url-pattern>
+    </servlet-mapping>
+
     <context-param>
         <param-name>DeUser</param-name>
         <param-value>Adam</param-value>
