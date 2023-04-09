@@ -5,7 +5,7 @@
          version="5.0">
 
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>index2.html</welcome-file>
     </welcome-file-list>
 
     <!-- Servlet start -->
@@ -54,7 +54,7 @@
         <servlet-name>initParamEx</servlet-name>
         <url-pattern>/feedBack</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>AppScope</servlet-name>
         <servlet-class>com.example.web102.AppScope</servlet-class>
@@ -99,7 +99,57 @@
         <servlet-name>error_Handling</servlet-name>
         <url-pattern>/cex</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>rqDispatcher</servlet-name>
+        <servlet-class>com.example2.rqDispatcher</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rqDispatcher</servlet-name>
+        <url-pattern>/rqD</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>include1</servlet-name>
+        <servlet-class>com.example2.include1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>include1</servlet-name>
+        <url-pattern>/incl1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Redirector</servlet-name>
+        <servlet-class>com.example2.Redirector</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Redirector</servlet-name>
+        <url-pattern>/sndRd</url-pattern>
+    </servlet-mapping>
+
+
     <!-- Servlet end -->
+
+    <!-- Filter Start -->
+    <filter>
+        <filter-name>servFilters</filter-name>
+        <filter-class>com.example2.filter_Servlet.servFilters</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>servFilters</filter-name>
+        <url-pattern>/flServ</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>servFilters2</filter-name>
+        <filter-class>com.example2.filter_Servlet.servFilters2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>servFilters2</filter-name>
+        <url-pattern>/flServ</url-pattern> <!-- mapped to same url, and chained after one another -->
+    </filter-mapping>
+
+    <!-- Filter End -->
 
 
     <!-- Error pages start -->
@@ -129,6 +179,6 @@
         <param-value>Global</param-value>
     </context-param>
     <!-- Context Param start -->
-    
+
 
 </web-app>
