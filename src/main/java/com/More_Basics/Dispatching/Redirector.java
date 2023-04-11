@@ -1,32 +1,29 @@
-package com.example.web102;
+package com.More_Basics.Dispatching;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.io.InputStream;
 
-public class content_MIME_Type extends HttpServlet {
+public class Redirector extends HttpServlet {
+
+    // how browser does it:-
+    /*
+    * res.setStatus(res.SC_MOVED_PERMANENTLY);
+    * res.setHeader("Location","http://...")
+    *
+    * How we do it in java
+    * public void sendRedirect(String url)
+    *  this is broken down to those 2 statement above on browser as it only understands those.
+    *
+    * */
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-
-        resp.setContentType("image/png");//mime type
-        ServletOutputStream sos = resp.getOutputStream();
-
-        //read img
-        InputStream ipS = getServletContext().getResourceAsStream("/IMAGES/java_logo.png");
-        byte[] bar = new byte[ipS.available()];
-        ipS.read(bar);
-
-        sos.write(bar);
-        sos.flush();
-
+        resp.getWriter().write("<br>HELLO 123!<br>");
+        resp.sendRedirect("index.html");
     }
 
     @Override

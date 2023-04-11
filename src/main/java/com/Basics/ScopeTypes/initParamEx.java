@@ -1,4 +1,4 @@
-package com.example.web102;
+package com.Basics.ScopeTypes;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;

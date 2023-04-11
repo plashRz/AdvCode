@@ -1,11 +1,11 @@
-package com.example2.filter_Servlet;
+package com.More_Basics.filter_Servlet;
 
 import jakarta.servlet.*;
-
 import java.io.IOException;
 
 
-public class servFilters2 implements Filter {
+
+public class servFilters implements Filter {
 
 
     /*
@@ -26,11 +26,11 @@ public class servFilters2 implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
         //filter logic
-        System.out.println("Before filter - 2");
+        System.out.println("Before filter - 1");
         //filter or servlet
         chain.doFilter(request,response);
         //post doFilter chain
-        System.out.println("After servlet - 2");
+        System.out.println("After servlet - 1");
 
     }
 

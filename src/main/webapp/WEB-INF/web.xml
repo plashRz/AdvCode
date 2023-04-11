@@ -11,7 +11,7 @@
     <!-- Servlet start -->
     <servlet>
         <servlet-name>FirstServ</servlet-name>
-        <servlet-class>com.example.web101.FirstServ</servlet-class>
+        <servlet-class>com.Basics.ServletTypes.FirstServ</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FirstServ</servlet-name>
@@ -20,7 +20,7 @@
 
     <servlet>
         <servlet-name>handiCraft</servlet-name>
-        <servlet-class>com.example.web101.handMadeServlet</servlet-class>
+        <servlet-class>com.Basics.ServletTypes.handMadeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>handiCraft</servlet-name>
@@ -28,7 +28,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>GenServlet</servlet-name>
-        <servlet-class>com.example.web101.GenServlet</servlet-class>
+        <servlet-class>com.Basics.ServletTypes.GenServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GenServlet</servlet-name>
@@ -36,15 +36,17 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServHttp</servlet-name>
-        <servlet-class>com.example.web101.ServHttp</servlet-class>
+        <servlet-class>com.Basics.ServletTypes.ServHttp</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServHttp</servlet-name>
         <url-pattern>/sh</url-pattern>
     </servlet-mapping>
+
+
     <servlet>
         <servlet-name>initParamEx</servlet-name>
-        <servlet-class>com.example.web102.initParamEx</servlet-class>
+        <servlet-class>com.Basics.ScopeTypes.initParamEx</servlet-class>
         <init-param>
             <param-name>Org-Name</param-name>
             <param-value>practice@gmail.com</param-value>
@@ -55,9 +57,11 @@
         <url-pattern>/feedBack</url-pattern>
     </servlet-mapping>
 
+
+
     <servlet>
         <servlet-name>AppScope</servlet-name>
-        <servlet-class>com.example.web102.AppScope</servlet-class>
+        <servlet-class>com.Basics.ScopeTypes.AppScope</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AppScope</servlet-name>
@@ -66,7 +70,7 @@
 
     <servlet>
         <servlet-name>SessionScope</servlet-name>
-        <servlet-class>com.example.web102.SessionScope</servlet-class>
+        <servlet-class>com.Basics.ScopeTypes.SessionScope</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SessionScope</servlet-name>
@@ -75,7 +79,7 @@
 
     <servlet>
         <servlet-name>RequestScope</servlet-name>
-        <servlet-class>com.example.web102.Request_Response_Scope</servlet-class>
+        <servlet-class>com.Basics.ScopeTypes.Request_Response_Scope</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RequestScope</servlet-name>
@@ -84,7 +88,7 @@
 
     <servlet>
         <servlet-name>content_MIME_Type</servlet-name>
-        <servlet-class>com.example.web102.content_MIME_Type</servlet-class>
+        <servlet-class>com.Basics.ScopeTypes.content_MIME_Type</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>content_MIME_Type</servlet-name>
@@ -93,7 +97,7 @@
 
     <servlet>
         <servlet-name>error_Handling</servlet-name>
-        <servlet-class>com.example.web103.error_Handling</servlet-class>
+        <servlet-class>com.Basics.ErrorHandle.error_Handling</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>error_Handling</servlet-name>
@@ -102,7 +106,7 @@
 
     <servlet>
         <servlet-name>rqDispatcher</servlet-name>
-        <servlet-class>com.example2.rqDispatcher</servlet-class>
+        <servlet-class>com.More_Basics.Dispatching.rqDispatcher</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>rqDispatcher</servlet-name>
@@ -111,7 +115,7 @@
 
     <servlet>
         <servlet-name>include1</servlet-name>
-        <servlet-class>com.example2.include1</servlet-class>
+        <servlet-class>com.More_Basics.Dispatching.include1</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>include1</servlet-name>
@@ -120,7 +124,7 @@
 
     <servlet>
         <servlet-name>Redirector</servlet-name>
-        <servlet-class>com.example2.Redirector</servlet-class>
+        <servlet-class>com.More_Basics.Dispatching.Redirector</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Redirector</servlet-name>
@@ -133,7 +137,7 @@
     <!-- Filter Start -->
     <filter>
         <filter-name>servFilters</filter-name>
-        <filter-class>com.example2.filter_Servlet.servFilters</filter-class>
+        <filter-class>com.More_Basics.filter_Servlet.servFilters</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>servFilters</filter-name>
@@ -142,7 +146,7 @@
 
     <filter>
         <filter-name>servFilters2</filter-name>
-        <filter-class>com.example2.filter_Servlet.servFilters2</filter-class>
+        <filter-class>com.More_Basics.filter_Servlet.servFilters2</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>servFilters2</filter-name>
@@ -158,7 +162,7 @@
         <location>/err.html</location>
     </error-page>
     <error-page>
-        <exception-type>com.example.CustomException.myException</exception-type>
+        <exception-type>com.Basics.CustomException.myException</exception-type>
         <location>/err.html</location>
     </error-page>
 
@@ -178,7 +182,16 @@
         <param-name>Domain</param-name>
         <param-value>Global</param-value>
     </context-param>
-    <!-- Context Param start -->
+    <!-- Context Param End -->
+
+    <!-- Listeners start -->
+
+    <listener>
+        <listener-class>com.More_Basics.Listerner_Servlet.Context_Listener</listener-class>
+    </listener>
+
+    <!-- Listeners end -->
+
 
 
 </web-app>

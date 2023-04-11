@@ -1,6 +1,6 @@
-package com.example.web103;
+package com.Basics.ErrorHandle;
 
-import com.example.CustomException.myException;
+import com.Basics.CustomException.myException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;

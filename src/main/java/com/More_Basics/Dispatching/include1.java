@@ -1,4 +1,4 @@
-package com.example2;
+package com.More_Basics.Dispatching;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;

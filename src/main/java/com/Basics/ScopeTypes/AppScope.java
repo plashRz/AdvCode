@@ -1,4 +1,4 @@
-package com.example.web102;
+package com.Basics.ScopeTypes;
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
@@ -41,6 +41,7 @@ public class AppScope extends HttpServlet {
             pw.write("<div><h3>"+s+" :- "+sc.getInitParameter(s)+"</h3></div>");
 
         }
+        pw.write("Stars:-"+sc.getInitParameter("Stars"));
         pw.write("<hr>");
         pw.println("<a href=\"Scope.html\">Go Back</a>");
 

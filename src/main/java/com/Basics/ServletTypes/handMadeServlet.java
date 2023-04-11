@@ -1,4 +1,4 @@
-package com.example.web101;
+package com.Basics.ServletTypes;
 
 import jakarta.servlet.*;
 
